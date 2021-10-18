@@ -190,13 +190,13 @@ nav {
 
 .airport-div {
     min-height: 200px;
-    background-image: url('./test-img/bao-menglong--FhoJYnw-cg-unsplash.jpg'), linear-gradient(120deg, black, white);
+    background-image: url('./test-img/bao-menglong--FhoJYnw-cg-unsplash.jpg'), linear-gradient(120deg, black, rgb(148, 148, 148));
     background-blend-mode: multiply;
     background-position-y: center;
     background-size: cover;
     margin-bottom: 60px;
     margin-top: 30px;
-    padding: 0px 30px;
+    padding: 10px 30px 30px;
     border-radius: 20px;
 }
 
@@ -209,12 +209,15 @@ nav {
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
+    padding: 10px 30px 30px;
     border-radius: 20px;
 }
 
-.top-location-row {
-    display: flex;
-    justify-content: space-evenly;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    grid-gap: 8px;
 }
 
 .location-item {
@@ -224,6 +227,8 @@ nav {
     padding: 6px 10px;
     border-radius: 4px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     transition: all 0.3s ease;
 }
 
@@ -239,8 +244,10 @@ nav {
 }
 
 .features {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-gap: 10px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 .features h3 {
@@ -277,7 +284,8 @@ footer {
 }
 
 .footer {
-    display: flex;
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(200px, 1fr));
     justify-content: space-evenly;
 
 }
@@ -352,5 +360,39 @@ footer {
         display: block;
         opacity: 1;
     }
+}
+
+@media screen and (max-width: 512px) {
+    header {
+        min-height: 100vh;
+        background-image: linear-gradient(200deg, rgba(255,255,255,1) 0%, rgb(241, 149, 87) 58%), url('./test-img/bg2.jpg');
+    }
+
+    .section-heading {
+        font-size: 36px;
+    }
+    
+    .section-subheading {
+        font-size: 24px;
+    }
+
+    .banner-text h1 {
+        font-size: 36px;
+    }
+    
+    .banner-text p {
+        font-size: 16px;
+        padding: 30px 0;
+    }
+
+    .features {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card{
+        height: 350px;
+        width: 280px;
+    }
+    
 }
 
